@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Graficos alunos</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<div class="carousel">
+		<div class="carousel__slide"> <script src="https://code.highcharts.com/highcharts.js"></script>
+			<div id="container" style="height: 812px;"></div>
+			<script type="text/javascript">
+		
+		
+				Highcharts.chart('container', {
+					credits: {
+						enabled: false
+					},
+					chart: {
+						type: 'pie',
+		
+					},
+					title: {
+						style: {
+							color: 'DodgerBlue',
+							fontWeight: 'bold',
+							fontFamily: '\'Roboto\', sans-serif',
+							fontSize: 60,
+		
+						},
+						text: 'TOTAL DE ALUNOS POR SEXO'
+					},
+					subtitle: {
+						style: {
+							fontFamily: '\'Roboto\', sans-serif',
+							fontSize: 40,
+						},
+						text: 'MILTON MATTOS BRAGA PROF EMEB'
+					},
+		
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							size: 536,
+		
+							dataLabels: {
+								style: {
+									fontSize: 45,
+									fontFamily: '\'Roboto\', sans-serif',
+									fontWeight: 10,
+									color: '#1C1C1C'
+								},
+								enabled: true,
+								format: '<b>{point.name}</b><br>{point.y:.f}',
+								distance: 35,
+		
+								filter: {
+									property: 'percentage',
+									operator: '>',
+									value: 4
+								}
+							}
+						}
+					},
+					series: [{
+						name: 'Alunos',
+						data: [
+							{ name: 'MENINOS', y: 142, },
+							{ name: 'MENINAS', y: 134, color: '#cc8400' },
+						]
+					}]
+				});
+			</script>
+			<footer class="o-footer">
+				<img src="http://3.236.124.244/jab/static/images/logoME.png" alt="Logo +Educar">
+				<img src="https://uploaddeimagens.com.br/images/002/746/830/full/BRASAO-MUNICIPAL-removebg.png?1593797452"
+					alt="Logo Jaboticabal" width=150 height=135>
+			</footer></div>
+		<div class="carousel__slide"><img class="slide__image"
+				src="https://images.unsplash.com/photo-1510090658125-0706ab1d38e1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97255cdff9a483b526ceb41bbbf8651f&auto=format&fit=crop&w=1350&q=80"
+				alt=""></div>
+		<div class="carousel__slide"><img class="slide__image"
+				src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=891fe858de061305b9d58986c3970d60&auto=format&fit=crop&w=1350&q=80"
+				alt=""></div>
+		<div class="carousel__slide"><img class="slide__image"
+				src="https://images.unsplash.com/photo-1497169345602-fbb1a307de16?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=efb46d876163a615ce7e33c9a81aa586&auto=format&fit=crop&w=1052&q=80"
+				alt=""></div>
+	</div>
+	<!-- Dependencias -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
